@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS変数</title>
+<style>
+:root {
+  --text-color: #333;
+}
+
+p {
+  color: var(--text-color);
+}
+
+ul {
+  color: var(--text-color);
+}
+
+p.blue {
+  --text-color: blue;
+}
+p.red {
+  color: var(--text-unknown-color, red);
+}
+</style>
+</head>
+<body>
+<p>テキストテキスト</p>
+<p class="blue">テキスト青</p>
+<p class="red">テキスト未定義の赤</p>
+<ul>
+  <li>リストリスト</li>
+</ul>
+</body>
+</html>
